@@ -20,7 +20,6 @@ export default function index() {
             alert("Izox kiritilishi shart")
             descRef.current.focus()
         }
-
         let creatCard = {
             name: `${nameRef.current.value}`,
             description: `${descRef.current.value}`,
@@ -28,7 +27,6 @@ export default function index() {
             price: priceRef.current.value,
             category_id: "2"
         }
-
         fetch("https://auth-rg69.onrender.com/api/products", {
             method: "POST",
             headers: {
@@ -40,7 +38,6 @@ export default function index() {
         priceRef.current.value = ''
         descRef.current.value = ''
     }
-
     return (
         <Form>
             <Title>MAHSULOT QO'SHISH</Title>
