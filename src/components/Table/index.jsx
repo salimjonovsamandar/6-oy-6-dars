@@ -25,7 +25,7 @@ export default function index() {
         .then(data => {
           if (data.message == "Mahsulot muvaffaqiyatli o'chirildi") {
             let copied = JSON.parse(JSON.stringify(data))
-            copied = copied.filter(el => {
+            copied = copied.map(el => {
               return el.id != id
             })
             setData(copied)
